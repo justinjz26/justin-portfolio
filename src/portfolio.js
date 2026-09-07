@@ -136,8 +136,7 @@ const publicationsInfo = {
       issue: "47",
       articleNumber: "e13090",
       year: "2025",
-      contribution:
-        "Battery assembly; acknowledged by name in the published article.",
+      contribution: "Battery assembly over a four-month period.",
       url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513090"
     }
   ]

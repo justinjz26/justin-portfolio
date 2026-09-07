@@ -113,6 +113,27 @@
   color: #8a6500;
 }
 
+/* Published article link */
+
+.publication-view-link {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: #8a6500;
+  font-size: 15.5px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.publication-view-link:hover {
+  text-decoration: underline;
+}
+
+.publication-view-link:focus-visible {
+  outline: 2px solid #8a6500;
+  outline-offset: 4px;
+}
+
 /* Dark mode */
 
 .dark-mode .publication-authors,
@@ -141,6 +162,14 @@
 
 .dark-mode .contribution-label {
   color: #ffcb05;
+}
+
+.dark-mode .publication-view-link {
+  color: #ffcb05;
+}
+
+.dark-mode .publication-view-link:focus-visible {
+  outline-color: #ffcb05;
 }
 
 /* Tablet and mobile */

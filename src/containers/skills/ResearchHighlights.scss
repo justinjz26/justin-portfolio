@@ -2,30 +2,48 @@
 
 #skills.research-highlights {
   margin-top: 0;
-  padding-top: 1.5rem;
-  padding-bottom: 3.5rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
   scroll-margin-top: 130px;
 }
 
 .research-highlights-header {
   width: 100%;
-  margin-bottom: 3.25rem;
-  text-align: center;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  text-align: left;
+}
+
+.research-highlights-eyebrow {
+  margin: 0 0 0.65rem;
+  color: #8a6500;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dark-mode .research-highlights-eyebrow {
+  color: #ffcb05;
 }
 
 .research-highlights .research-highlights-heading {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 52px;
-  font-weight: 400;
+  font-size: 42px;
+  font-weight: 700;
   line-height: 1.15;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
 }
 
 .research-highlights-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 1.75rem;
   align-items: start;
 }
 
@@ -33,7 +51,7 @@
   min-width: 0;
   color: inherit;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 8px;
   transition: transform 0.2s ease;
 }
 
@@ -54,9 +72,8 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 7px;
   background-color: #000000;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
 }
 
 .research-highlight-video {
@@ -72,80 +89,59 @@
 }
 
 .research-highlight-title {
-  margin: 1rem 0.5rem 0;
+  margin: 1rem 0 0;
   color: #1f1f1f;
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 1.35;
-  text-align: center;
+  text-align: left;
   transition: color 0.2s ease;
-}
-
-.research-highlight-title::after {
-  content: "";
-  display: block;
-  width: 42px;
-  height: 2px;
-  margin: 0.7rem auto 0;
-  background-color: #8a6500;
 }
 
 .dark-mode .research-highlight-title {
   color: #ffffff;
 }
 
-.dark-mode .research-highlight-title::after {
-  background-color: #ffcb05;
+.research-highlight-subtitle {
+  margin: 0.4rem 0 0;
+  color: #555b66;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
-.research-highlight-card:hover .research-highlight-title {
+.dark-mode .research-highlight-subtitle {
+  color: #bdc5d3;
+}
+
+.research-highlight-card:hover .research-highlight-title,
+.research-highlight-card:focus-visible .research-highlight-title {
   color: #8a6500;
 }
 
-.dark-mode .research-highlight-card:hover .research-highlight-title {
+.dark-mode .research-highlight-card:hover .research-highlight-title,
+.dark-mode .research-highlight-card:focus-visible .research-highlight-title {
   color: #ffcb05;
-}
-
-.research-highlights-footer {
-  margin-top: 3rem;
-  text-align: center;
 }
 
 .research-highlights-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0.7rem 1.4rem;
-  border: 2px solid #00274c;
-  border-radius: 8px;
-  background-color: transparent;
-  color: #00274c;
+  gap: 0.35rem;
+  padding: 0.4rem 0;
+  color: #8a6500;
   font-size: 16px;
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.4;
   text-decoration: none;
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease;
+  white-space: nowrap;
 }
 
 .dark-mode .research-highlights-link {
-  border-color: #ffcb05;
-  background-color: transparent;
   color: #ffcb05;
 }
 
 .research-highlights-link:hover {
-  transform: translateY(-2px);
-  background-color: #00274c;
-  color: #ffffff;
-}
-
-.dark-mode .research-highlights-link:hover {
-  background-color: #ffcb05;
-  color: #00274c;
+  text-decoration: underline;
 }
 
 .research-highlights-link:focus-visible {
@@ -163,32 +159,23 @@
   }
 }
 
-@media (max-width: 1100px) {
-  .research-highlights-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .research-highlight-card:last-child {
-    width: calc(50% - 1rem);
-    grid-column: 1 / -1;
-    justify-self: center;
-  }
-}
-
 @media (max-width: 768px) {
   #skills.research-highlights {
     margin-top: 0;
-    padding-top: 1rem;
-    padding-bottom: 3.5rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
     scroll-margin-top: 110px;
   }
 
   .research-highlights-header {
-    margin-bottom: 2.75rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.7rem;
   }
 
   .research-highlights .research-highlights-heading {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .research-highlights-grid {
@@ -196,17 +183,8 @@
     gap: 2.75rem;
   }
 
-  .research-highlight-card:last-child {
-    width: 100%;
-    grid-column: auto;
-  }
-
   .research-highlight-title {
     font-size: 20px;
-  }
-
-  .research-highlights-footer {
-    margin-top: 3rem;
   }
 }
 

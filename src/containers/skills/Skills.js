@@ -13,12 +13,14 @@ export default function Skills() {
   const researchHighlights = [
     {
       title: "Wearable Electronics",
+      subtitle: "Printed circuits and soft-device integration",
       video: "Wearables2.mp4",
       route: "/research/wearable-electronics",
       ariaLabel: "Soft wearable LED-ring prototype operating during handling"
     },
     {
       title: "Dragonfly-Inspired Millirobot",
+      subtitle: "Hydrogel synthesis and wing-motion analysis",
       video: "Dragonfly.mp4",
       route: "/research/soft-robotics",
       ariaLabel:
@@ -26,6 +28,7 @@ export default function Skills() {
     },
     {
       title: "Liquid-Metal Artificial Muscle",
+      subtitle: "Material synthesis and actuator tracking",
       video: "Actuator.mp4",
       route: "/research/soft-robotics",
       ariaLabel:
@@ -83,7 +86,13 @@ export default function Skills() {
       id="skills"
     >
       <div className="research-highlights-header">
-        <h1 className="research-highlights-heading">Research Highlights</h1>
+        <div>
+          <p className="research-highlights-eyebrow">Selected work</p>
+          <h1 className="research-highlights-heading">Research Highlights</h1>
+        </div>
+        <Link className="research-highlights-link" to="/research">
+          All research <span aria-hidden="true">→</span>
+        </Link>
       </div>
 
       <Fade duration={300}>
@@ -114,14 +123,11 @@ export default function Skills() {
                 </div>
 
                 <h2 className="research-highlight-title">{highlight.title}</h2>
+                <p className="research-highlight-subtitle">
+                  {highlight.subtitle}
+                </p>
               </Link>
             ))}
-          </div>
-
-          <div className="research-highlights-footer">
-            <Link className="research-highlights-link" to="/research">
-              View All Research
-            </Link>
           </div>
         </div>
       </Fade>

@@ -121,6 +121,15 @@ export default function PublicationsPage() {
                         </strong>{" "}
                         {contribution.contribution}
                       </p>
+
+                      <a
+                        className="publication-view-link"
+                        href={contribution.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Published article ↗
+                      </a>
                     </div>
                   </li>
                 )
