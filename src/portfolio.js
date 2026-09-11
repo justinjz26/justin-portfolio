@@ -72,7 +72,10 @@ const educationInfo = {
       duration: "Expected December 2026",
       desc: "",
       descBullets: [
-        "Irma M. Wyman Scholar",
+        {
+          text: "Irma M. Wyman Scholar",
+          link: "https://en.wikipedia.org/wiki/Irma_Wyman"
+        },
         "Research Focus: Soft Robotics",
         "GPA: 4.0 / 4.0",
         "Class Rank: 1st"

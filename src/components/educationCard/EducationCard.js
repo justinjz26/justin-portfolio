@@ -5,20 +5,41 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function EducationCard({school}) {
   const imgRef = createRef();
+  const {isDark} = useContext(StyleContext);
 
   const GetDescBullets = ({descBullets}) => {
     return descBullets
-      ? descBullets.map((item, i) => (
-          <li key={i} className="subTitle">
-            {item}
-          </li>
-        ))
+      ? descBullets.map((item, i) => {
+          const isLink = typeof item === "object" && item.link;
+
+          return (
+            <li key={i} className="subTitle">
+              {isLink ? (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="education-bullet-link"
+                  aria-label={`${item.text} information`}
+                >
+                  {item.text}
+                  <span className="education-link-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </a>
+              ) : (
+                item
+              )}
+            </li>
+          );
+        })
       : null;
   };
-  const {isDark} = useContext(StyleContext);
 
-  if (!school.logo)
+  if (!school.logo) {
     console.error(`Image of ${school.name} is missing in education section`);
+  }
+
   return (
     <div>
       <Fade left duration={1000}>
@@ -26,7 +47,7 @@ export default function EducationCard({school}) {
           {school.logo && (
             <div className="education-card-left">
               <img
-                crossOrigin={"anonymous"}
+                crossOrigin="anonymous"
                 ref={imgRef}
                 className="education-roundedimg"
                 src={school.logo}
@@ -34,6 +55,7 @@ export default function EducationCard({school}) {
               />
             </div>
           )}
+
           <div className="education-card-right">
             <h5 className="education-text-school">{school.schoolName}</h5>
 
@@ -49,6 +71,7 @@ export default function EducationCard({school}) {
                   {school.college}
                 </h5>
               )}
+
               <h5
                 className={
                   isDark
@@ -58,6 +81,7 @@ export default function EducationCard({school}) {
               >
                 {school.subHeader}
               </h5>
+
               <p
                 className={`${
                   isDark ? "dark-mode" : ""
@@ -65,7 +89,9 @@ export default function EducationCard({school}) {
               >
                 {school.duration}
               </p>
+
               <p className="education-text-desc">{school.desc}</p>
+
               <div className="education-text-bullets">
                 <ul>
                   <GetDescBullets descBullets={school.descBullets} />
@@ -75,6 +101,7 @@ export default function EducationCard({school}) {
           </div>
         </div>
       </Fade>
+
       <Slide left duration={2000}>
         <div className="education-card-border"></div>
       </Slide>

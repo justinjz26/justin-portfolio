@@ -20,7 +20,7 @@ export default function Courses() {
 
   return (
     <div className={isDark ? "dark-mode courses-page" : "courses-page"}>
-      <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
+      <StyleProvider value={{isDark, changeTheme}}>
         <Header />
 
         <section
@@ -48,8 +48,12 @@ export default function Courses() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="teaching-course-link"
+                  aria-label="View the official Robotics 204 course page"
                 >
                   Robotics 204: Introduction to Human-Robot Systems
+                  <span className="teaching-link-arrow" aria-hidden="true">
+                    ↗
+                  </span>
                 </a>
               </h2>
 
@@ -70,11 +74,9 @@ export default function Courses() {
                 <li>
                   Hold office hours and provide instructional support to students
                 </li>
-
                 <li>
                   Assist with hands-on robotics laboratory sessions
                 </li>
-
                 <li>
                   Grade coursework and contribute to quiz and exam development
                 </li>
@@ -86,9 +88,7 @@ export default function Courses() {
         </section>
 
         <Achievement />
-
         <Footer />
-
         <ScrollToTopButton />
       </StyleProvider>
     </div>
