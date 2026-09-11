@@ -235,6 +235,38 @@ export default function Achievement() {
 
               <hr className="course-detail-divider" />
             </div>
+
+            <div className="course-detail">
+              <hr className="course-detail-divider" />
+
+              <h2
+                className={
+                  isDark
+                    ? "dark-mode course-detail-title"
+                    : "course-detail-title"
+                }
+              >
+                Robotics 599 · Computational Symmetry in AI &amp; Robotics
+              </h2>
+
+              <p
+                className={
+                  isDark
+                    ? "dark-mode course-detail-text"
+                    : "course-detail-text"
+                }
+              >
+                Explores symmetry in geometry through group theory,
+                differential geometry, representation theory, and Lie groups,
+                then applies these mathematical tools to computationally
+                efficient and generalizable methods for learning, perception,
+                estimation, and control. Topics include geometric learning,
+                symmetry-preserving algorithms, computer vision, AI, and
+                robotics.
+              </p>
+
+              <hr className="course-detail-divider" />
+            </div>
           </div>
         </div>
       </div>

@@ -280,6 +280,14 @@ const achievementSection = {
       grade: "",
       image: require("./assets/images/umichLogo.png"),
       footerLink: []
+    },
+    {
+      courseNumber: "Robotics 599",
+      courseTitle: "Computational Symmetry in AI & Robotics",
+      credits: "",
+      grade: "",
+      image: require("./assets/images/umichLogo.png"),
+      footerLink: []
     }
   ],
   display: true

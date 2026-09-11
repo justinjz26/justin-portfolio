@@ -27,10 +27,10 @@
   color: $subTitle;
 }
 
-/* Five course cards in one row */
+/* Six course cards in two balanced rows */
 #achievements .achievement-cards-div {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -110,14 +110,14 @@
   margin-top: 2rem;
 }
 
-/* Laptop screens: keep all five cards in one row */
+/* Laptop screens: keep three cards per row */
 @media (max-width: 1380px) {
   .achievement-heading {
     font-size: 40px;
   }
 
   #achievements .achievement-cards-div {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.75rem;
   }
 
