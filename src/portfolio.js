@@ -118,6 +118,14 @@ const publicationsInfo = {
     },
     {
       title:
+        "High-speed, low-voltage soft actuation through field-effect elastocapillarity",
+      authors:
+        "Jiahe Liao, Xiangqiang Bao, Yihao Geng, Marta Calisto Freitas, Seung Won Lee, Zihuan Bai, Jianhua Zhang, Jimmy Liao, Justin Jinchuan Zheng, Abrar Shariff, Muhammad Yunusa, Mahmoud Tavakoli, Massimo Mastrangeli, Carmel Majidi, Metin Sitti.",
+      status: "Manuscript in preparation",
+      year: "2026"
+    },
+    {
+      title:
         "Exploring Chaos Theory through Numerical Simulations of a Bouncing Regular n-Sided Polygonal Die",
       authors:
         "Jonathan Li, Arnold Yuxuan Xie, Justin Jinchuan Zheng, Bing Q. Li.",
